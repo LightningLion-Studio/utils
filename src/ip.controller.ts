@@ -22,7 +22,7 @@ export const ipController = new Elysia({ prefix: '/ip', tags: ['IP'] })
         code: t.Literal(200),
         message: t.String({ default: 'OK', description: '状态信息' }),
         data: t.Object({
-          ip: t.String({ default: 'unknown', description: 'IP地址', format: 'ipv4' }),
+          ip: t.String({ default: 'unknown', description: 'IP地址' }),
         }),
       }),
     },
@@ -76,6 +76,6 @@ export const ipController = new Elysia({ prefix: '/ip', tags: ['IP'] })
       }),
     },
     query: t.Object({
-      ip: t.Optional(t.String({ description: 'IP地址', default: '', format: 'ipv4' })),
+      ip: t.Optional(t.String({ description: 'IP地址', default: '' })),
     }),
   })
