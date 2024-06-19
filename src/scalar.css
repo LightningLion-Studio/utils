@@ -1,0 +1,7 @@
+a.darklight-reference-promo {
+  display: none !important;
+}
+
+button.darklight[type="button"] {
+  margin-bottom: 20px;
+}

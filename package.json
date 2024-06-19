@@ -1,15 +1,21 @@
 {
   "name": "app",
+  "type": "module",
   "version": "1.0.50",
+  "module": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "dev": "bun run --watch src/index.ts",
+    "start": "bun run src/index.ts"
   },
   "dependencies": {
-    "elysia": "latest"
+    "@elysiajs/eden": "^1.0.14",
+    "@elysiajs/swagger": "^1.0.5",
+    "axios": "^1.7.2",
+    "elysia": "latest",
+    "elysia-ip": "^1.0.7"
   },
   "devDependencies": {
+    "@nailiable/eslint-config": "^2.16.3",
     "bun-types": "latest"
-  },
-  "module": "src/index.js"
+  }
 }
