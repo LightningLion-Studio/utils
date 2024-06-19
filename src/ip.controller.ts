@@ -42,7 +42,7 @@ export const ipController = new Elysia({ prefix: '/ip', tags: ['IP'] })
       else {
         return {
           code: 200,
-          message: data.data.data.location,
+          message: data.data.data.location || '未知',
           data: data.data,
         }
       }
