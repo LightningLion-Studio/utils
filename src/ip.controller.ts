@@ -2,8 +2,10 @@ import Elysia, { t } from 'elysia'
 import { ip } from 'elysia-ip'
 import type { AxiosResponse } from 'axios'
 import axios, { AxiosError } from 'axios'
+import { cors } from '@elysiajs/cors'
 
 export const ipController = new Elysia({ prefix: '/ip', tags: ['IP'] })
+  .use(cors())
   .use(ip())
   .get('', (ctx) => {
     return {

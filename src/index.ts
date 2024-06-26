@@ -1,8 +1,10 @@
 import { Elysia } from 'elysia'
 import { swagger } from '@elysiajs/swagger'
+import cors from '@elysiajs/cors'
 import { ipController } from './ip.controller'
 
 new Elysia()
+  .use(cors())
   .use(
     swagger({
       path: '/docs',
